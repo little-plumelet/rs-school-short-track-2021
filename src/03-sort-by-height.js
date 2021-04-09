@@ -12,12 +12,12 @@
 function sortByHeight(arr) {
   const res = [];
   let tmp;
-  let counter = 0;
+  let counter = 1;
 
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] !== -1) res.push(arr[i]);
   }
-  while (true) {
+  while (counter) {
     counter = 0;
     for (let i = 1; i < res.length; i++) {
       if (res[i - 1] > res[i]) {
