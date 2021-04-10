@@ -22,6 +22,14 @@
  */
 function getDNSStats(/* domains */) {
   throw new Error('Not implemented');
+  // for (let i = 0; i < domains.length; i ++) {
+  //   let
+  // }
+  // const re = /\.ru/g;
+  // let tmpArr;
+  // const res = new Object{};
+
+  // tmpArr = domains.matchAll(re);
 }
 
 module.exports = getDNSStats;
