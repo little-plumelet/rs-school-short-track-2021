@@ -15,15 +15,16 @@
  * The result should be 9
  */
 function getMatrixElementsSum(matrix) {
-  function reducer(acc, val) {
-    let res;
-    if (val >= 0) res = acc + val;
-    return res;
+  const indexesSet = new Set();
+  let res = 0;
+
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
+      if (matrix[i][j] === 0) indexesSet.add(j);
+      if (!(indexesSet.has(j))) res += matrix[i][j];
+    }
   }
-  let arr = matrix;
-  arr = arr.reduce((acc, val) => acc.concat(val));
-  arr = arr.reduce(reducer);
-  return arr;
+  return res;
 }
 
 module.exports = getMatrixElementsSum;
